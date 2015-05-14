@@ -2,7 +2,7 @@
 
 #include <chrono>
 
-namespace virtdb { namespace util {
+namespace virtdb { namespace utils {
   
   class relative_time final
   {

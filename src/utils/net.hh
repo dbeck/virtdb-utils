@@ -4,7 +4,7 @@
 #include <string>
 #include <utility>
 
-namespace virtdb { namespace util {
+namespace virtdb { namespace utils {
 
   struct net
   {

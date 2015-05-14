@@ -1,8 +1,8 @@
 #pragma once
 
-#include <util/relative_time.hh>
-#include <util/exception.hh>
-#include <util/constants.hh>
+#include <utils/relative_time.hh>
+#include <utils/exception.hh>
+#include <utils/constants.hh>
 
 #include <map>
 #include <vector>
@@ -13,7 +13,7 @@
 #include <chrono>
 #include <iostream>
 
-namespace virtdb { namespace util {
+namespace virtdb { namespace utils {
 
   template <typename T, size_t CHECK_TIMEOUT_MS=50>
   class table_collector final

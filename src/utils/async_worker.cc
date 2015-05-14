@@ -1,7 +1,7 @@
-#include <util/async_worker.hh>
+#include <utils/async_worker.hh>
 #include <iostream>
 
-namespace virtdb { namespace util {
+namespace virtdb { namespace utils {
   
   async_worker::async_worker(std::function<bool(void)> worker,
                              size_t n_retries_on_exception,

@@ -1,6 +1,6 @@
 #pragma once
 
-namespace virtdb { namespace util {
+namespace virtdb { namespace utils {
   static const unsigned long DEFAULT_TIMEOUT_MS      = 1000;
   static const unsigned long TINY_TIMEOUT_MS         = 20;
   static const unsigned long SHORT_TIMEOUT_MS        = 100;

@@ -1,6 +1,6 @@
-#include <util/hex_util.hh>
+#include <utils/hex_util.hh>
 
-namespace virtdb { namespace util {
+namespace virtdb { namespace utils {
   
   namespace
   {

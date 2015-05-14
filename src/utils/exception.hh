@@ -4,7 +4,7 @@
 #include <sstream>
 #include <string>
 
-namespace virtdb { namespace util {
+namespace virtdb { namespace utils {
 
   class exception : public std::exception
   {

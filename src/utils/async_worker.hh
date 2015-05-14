@@ -1,6 +1,6 @@
 #pragma once
 
-#include <util/barrier.hh>
+#include <utils/barrier.hh>
 #include <thread>
 #include <mutex>
 #include <functional>
@@ -9,7 +9,7 @@
 #include <exception>
 #include <stdexcept>
 
-namespace virtdb { namespace util {
+namespace virtdb { namespace utils {
   
   class async_worker final
   {

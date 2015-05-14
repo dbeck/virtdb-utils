@@ -5,9 +5,9 @@
 #include <queue>
 #include <condition_variable>
 #include <mutex>
-#include <util/async_worker.hh>
+#include <utils/async_worker.hh>
 
-namespace virtdb { namespace util {
+namespace virtdb { namespace utils {
   
   class timer_service final
   {

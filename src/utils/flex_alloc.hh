@@ -2,7 +2,7 @@
 
 #include <memory>
 
-namespace virtdb { namespace util {
+namespace virtdb { namespace utils {
   
   template <typename T, unsigned long STATIC_SIZE>
   class flex_alloc final

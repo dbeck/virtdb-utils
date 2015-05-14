@@ -1,9 +1,9 @@
-#include <util/barrier.hh>
-#include <util/constants.hh>
+#include <utils/barrier.hh>
+#include <utils/constants.hh>
 #include <cassert>
 #include <chrono>
 
-using namespace virtdb::util;
+using namespace virtdb::utils;
 
 barrier::barrier(unsigned int nthreads)
 : nwaiting_(0),

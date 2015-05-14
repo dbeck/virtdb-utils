@@ -4,7 +4,7 @@
 #include <cassert>
 #include <functional>
 
-namespace virtdb { namespace util {
+namespace virtdb { namespace utils {
 
   class mempool
   {

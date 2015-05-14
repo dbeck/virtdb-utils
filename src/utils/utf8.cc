@@ -1,7 +1,7 @@
 
-#include <util/utf8.hh>
+#include <utils/utf8.hh>
 
-namespace virtdb { namespace util {
+namespace virtdb { namespace utils {
   
   void
   utf8::sanitize(char * px, size_t len)

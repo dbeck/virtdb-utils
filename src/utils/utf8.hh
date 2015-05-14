@@ -2,7 +2,7 @@
 #include <cstdint>
 #include <string>
 
-namespace virtdb { namespace util {
+namespace virtdb { namespace utils {
   
   struct utf8
   {

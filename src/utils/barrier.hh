@@ -3,7 +3,7 @@
 #include <mutex>
 #include <condition_variable>
 
-namespace virtdb { namespace util {
+namespace virtdb { namespace utils {
 
   class barrier final
   {

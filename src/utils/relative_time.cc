@@ -1,6 +1,6 @@
-#include <util/relative_time.hh>
+#include <utils/relative_time.hh>
 
-namespace virtdb { namespace util {
+namespace virtdb { namespace utils {
 
   relative_time::relative_time(const timepoint & start)
   : started_at_(start)

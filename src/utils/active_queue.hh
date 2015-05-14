@@ -1,8 +1,8 @@
 #pragma once
 
-#include <util/barrier.hh>
-#include <util/exception.hh>
-#include <util/constants.hh>
+#include <utils/barrier.hh>
+#include <utils/exception.hh>
+#include <utils/constants.hh>
 
 #include <queue>
 #include <thread>
@@ -15,7 +15,7 @@
 #include <algorithm>
 #include <iostream>
 
-namespace virtdb { namespace util {
+namespace virtdb { namespace utils {
 
   template <typename ITEM, unsigned long WAKEUP_FREQ=DEFAULT_TIMEOUT_MS>
   class active_queue final

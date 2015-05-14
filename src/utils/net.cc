@@ -1,5 +1,5 @@
-#include <util/net.hh>
-#include <util/exception.hh>
+#include <utils/net.hh>
+#include <utils/exception.hh>
 #include <mutex>
 #include <atomic>
 #include <sys/socket.h>
@@ -11,7 +11,7 @@
 #include <unistd.h>
 #include <string.h>
 
-namespace virtdb { namespace util {
+namespace virtdb { namespace utils {
   
   std::pair<std::string, unsigned short>
   convert(const struct sockaddr *sa)

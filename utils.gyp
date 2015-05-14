@@ -1,6 +1,6 @@
 {
   'variables': {
-    'common_sources' :  [
+    'utils_sources' :  [
                           'src/utils/constants.hh',          'src/utils/active_queue.hh',
                           'src/utils/flex_alloc.hh',         'src/utils/mempool.hh',
                           'src/utils/barrier.cc',            'src/utils/barrier.hh',
@@ -51,7 +51,7 @@
   },
   'conditions': [
     ['OS=="mac"', {
-     'defines':            [ 'COMMON_MAC_BUILD', 'ENABLE_OWN_IP_CACHE', ],
+     'defines':            [ 'UTILS_MAC_BUILD', ],
      'xcode_settings':  {
        'GCC_ENABLE_CPP_EXCEPTIONS':    'YES',
        'OTHER_CFLAGS':               [ '-std=c++11', ],
@@ -59,7 +59,7 @@
      },
     ],
     ['OS=="linux"', {
-     'defines':            [ 'COMMON_LINUX_BUILD', ],
+     'defines':            [ 'UTILS_LINUX_BUILD', ],
      'link_settings': {
        'ldflags':   [ '-Wl,--no-as-needed', ],
        'libraries': [ '-lrt', ],
@@ -72,23 +72,29 @@
       'conditions': [
         ['OS=="mac"', {
           'variables':  { 'utils_root':  '<!(pwd)/../', },
+          'xcode_settings':  {
+            'GCC_ENABLE_CPP_EXCEPTIONS':    'YES',
+            'OTHER_CFLAGS':               [ '-std=c++11', ],
+          },
           'direct_dependent_settings': {
-            'defines':      [ 'USING_UTILS_LIB', 'UTILS_MAC_BUILD', 'ENABLE_OWN_IP_CACHE', ],
             'include_dirs': [ '<(utils_root)/', ],
           },},],
         ['OS=="linux"', {
           'direct_dependent_settings': {
-            'defines':      [ 'USING_UTILS_LIB', 'UTILS_LINUX_BUILD', ],
             'include_dirs':       [ '.', ],
           },},],
-        ],
-               'target_name':                   'common',
-               'type':                          'static_library',
-               'hard_dependency':                1,
-               'dependencies':                [ 'lz4', 'proto/proto.gyp:*', ],
-               'export_dependent_settings':   [ 'lz4', 'proto/proto.gyp:*', ],
-               'cflags':                      [ '-std=c++11', '-Wall', ],
-               'sources':                     [ '<@(common_sources)', ],
-               },
-              ],
+      ],
+      'target_name':                   'utils',
+      'type':                          'static_library',
+      'defines':                     [ 'USING_UTILS_LIB',  ],
+      'sources':                     [ '<@(utils_sources)', ],
+    },
+    {
+      'target_name':       'utils_test',
+      'type':              'executable',
+      'dependencies':  [ 'utils', 'deps_/gtest/gyp/gtest.gyp:gtest_lib', ],
+      'include_dirs':  [ './deps_/gtest/include/', ],
+      'sources':       [ 'test/utils_test.cc', ],
+    },
+  ],
 }

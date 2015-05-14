@@ -1,7 +1,7 @@
-#include <util/timer_service.hh>
+#include <utils/timer_service.hh>
 #include <iostream>
 
-namespace virtdb { namespace util {
+namespace virtdb { namespace utils {
   
   timer_service::timer_service(uint64_t wakeup_freq_ms)
   : wakeup_freq_ms_(wakeup_freq_ms),
