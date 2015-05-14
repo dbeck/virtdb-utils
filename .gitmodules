@@ -1,4 +1,0 @@
-[submodule "deps_/gtest"]
-	path = deps_/gtest
-	url = https://github.com/starschema/virtdb-gtest.git
-	branch = gtest-1.7.0
