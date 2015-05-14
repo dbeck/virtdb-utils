@@ -1,5 +1,4 @@
 #include <util/async_worker.hh>
-#include <zmq.hpp>
 #include <iostream>
 
 namespace virtdb { namespace util {
@@ -78,29 +77,6 @@ namespace virtdb { namespace util {
         // reset exception counter
         exceptions_caught = 0;
         error_ = nullptr;
-      }
-      catch( const zmq::error_t & e )
-      {
-        {
-          std::lock_guard<std::mutex> l(error_mutex_);
-          error_ = std::current_exception();
-        }
-
-        ++exceptions_caught;
-        std::cerr << "0MQ exception caught: " << e.what()
-                  << " ncaught: " << exceptions_caught
-                  << "\n";
-        std::this_thread::sleep_for(std::chrono::seconds(exceptions_caught));
-        // if we keep receiving exceptions we stop
-        if( exceptions_caught > n_retries_on_exception_ )
-        {
-          std::cerr << "stop worker loop because of too many errors. rethrowing exception: " << e.what() << "\n";
-          
-          if( die_on_exception_ )
-            throw;
-          else
-            break;
-        }
       }
       catch( const std::exception & e )
       {
