@@ -37,6 +37,6 @@ if [ $? -ne 0 ]; then echo "Failed to tag repo"; exit 10; fi
 git push origin $BUILDNO
 if [ $? -ne 0 ]; then echo "Failed to push tag to repo."; exit 10; fi
 
-out/Debug/utils-test
+out/Debug/utils_test
 if [ $? -ne 0 ]; then echo "$COMPONENT tests failed"; exit 10; fi
 
