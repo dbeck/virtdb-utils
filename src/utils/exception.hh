@@ -50,7 +50,7 @@ namespace virtdb { namespace utils {
 }}
 
 #ifndef EXCEPTION_UTIL_
-#define EXCEPTION_UTIL_(MSG) virtdb::util::exception(__FILE__,__LINE__,__func__,MSG)
+#define EXCEPTION_UTIL_(MSG) virtdb::utils::exception(__FILE__,__LINE__,__func__,MSG)
 #endif // EXCEPTION_UTIL_
 
 #ifndef THROW_
