@@ -51,7 +51,7 @@
   },
   'conditions': [
     ['OS=="mac"', {
-     'defines':            [ 'UTILS_MAC_BUILD', ],
+     'defines':            [ 'UTILS_MAC_BUILD', 'ENABLE_OWN_IP_CACHE', 'NO_IPV6_SUPPORT', ],
      'xcode_settings':  {
        'GCC_ENABLE_CPP_EXCEPTIONS':    'YES',
        'OTHER_CFLAGS':               [ '-std=c++11', ],
