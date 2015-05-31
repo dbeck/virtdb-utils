@@ -62,7 +62,7 @@
      'defines':            [ 'UTILS_LINUX_BUILD', ],
      'link_settings': {
        'ldflags':   [ '-Wl,--no-as-needed', ],
-       'libraries': [ '-lrt', ],
+       'libraries': [ '-lrt', '-pthread', ],
       },
      },
     ],
