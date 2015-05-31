@@ -60,9 +60,10 @@
     ],
     ['OS=="linux"', {
      'defines':            [ 'UTILS_LINUX_BUILD', ],
+     'cflags':      [ '-pthread', ],
      'link_settings': {
-       'ldflags':   [ '-Wl,--no-as-needed', ],
-       'libraries': [ '-lrt', '-pthread', ],
+       'ldflags':   [ '-Wl,--no-as-needed', '-pthread', ],
+       'libraries': [ '-lrt', '-lpthread', ],
       },
      },
     ],
